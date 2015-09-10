@@ -1,0 +1,258 @@
+/* Small screens */
+
+@media (max-width: 460px) {
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .header {
+    a img {
+      float :none;
+    }
+    nav {
+      display: none;
+    }
+    .headings {
+      h1 {
+        font-size: 38px;
+      }
+      h3 {
+        margin-bottom: 50px;
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      br {
+        display: none;
+      }
+    }
+    video {
+      display: none;
+    }
+  }
+  .process {
+    .sec(50px, 60px);
+    h3 {
+      margin-bottom: 50px;
+    }
+    img:first-child {
+      display: none;
+    }
+    img:nth-child(2) {
+      max-width: 100%;
+      display: block;
+    }
+    .cover {
+      .flexbox {
+        display: none;
+      }
+    }
+  }
+  .testimonials {
+    .flexbox {
+      -webkit-flex-direction: column;  /* Safari 6.1+ */
+      flex-direction: column;
+      .item {
+        p {
+          width: 80%;
+          font-size: 28px;
+        }
+        .profile {
+          margin-bottom: 40px;
+          -webkit-flex-direction: row;  /* Safari 6.1+ */
+          flex-direction: row;
+          img {
+            width: 70px;
+          }
+          span {
+            margin: 20px 0 20px 20px;
+          }
+        }
+      }
+    }
+    .subtitle {
+      margin-top: 40px;
+    }
+    ul {
+      li {
+        width: 50%;
+        img {
+          width: 160px;
+        }
+      }
+    }
+  }
+  .technology {
+    .sec(20px,80px);
+    ul {
+      li {
+        width: 33%;
+        &:last-child {
+          display: none;
+        }
+        img {
+          width: 80px;
+          height: 80px;
+          .opacity(100);
+          filter: none;
+          -webkit-filter: grayscale(0%);
+        }
+      }
+    }
+  }
+  .contact {
+    .sec(50px,50px);
+    fieldset {
+      width: 90%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+  footer {
+    .flexbox {
+      -webkit-flex-direction: column;  /* Safari 6.1+ */
+      flex-direction: column;
+      .item {
+        text-align: center;
+        &:first-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet devices */
+
+@media (min-width: 461px) and (max-width: 720px) {
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .header {
+    a img {
+      float :none;
+    }
+    nav {
+      display: none;
+    }
+    .headings {
+      h1 {
+        font-size: 43px;
+      }
+      h3 {
+        margin-bottom: 50px;
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      br {
+        display: none;
+      }
+    }
+    video {
+      display: none;
+    }
+  }
+  .process {
+    .sec(50px, 60px);
+    h3 {
+      margin-bottom: 50px;
+    }
+    .cover {
+      .flexbox {
+        margin-top: 20px;
+        .item {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .testimonials {
+    .flexbox {
+      -webkit-flex-direction: column;  /* Safari 6.1+ */
+      flex-direction: column;
+      .item {
+        p {
+          width: 80%;
+          font-size: 28px;
+        }
+        .profile {
+          margin-bottom: 40px;
+          -webkit-flex-direction: row;  /* Safari 6.1+ */
+          flex-direction: row;
+          img {
+            width: 70px;
+          }
+          span {
+            margin: 20px 0 20px 20px;
+          }
+        }
+      }
+    }
+    .subtitle {
+      margin-top: 40px;
+    }
+    ul {
+      li {
+        width: 33.3%;
+        img {
+          width: 160px;
+        }
+      }
+    }
+  }
+  .technology {
+    .sec(20px,80px);
+    ul {
+      li {
+        width: 25%;
+        &:nth-child(9), &:nth-child(10) {
+          display: none;
+        }
+        img {
+          .opacity(100);
+          filter: none;
+          -webkit-filter: grayscale(0%);
+        }
+      }
+    }
+  }
+  .contact {
+    .sec(50px,50px);
+    fieldset {
+      width: 75%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Big screens */
+
+@media (min-width: 721px) and (max-width: 1020px) {
+  .header {
+    .headings {
+      video {
+        display: block;
+      }
+    }
+  }
+  .testimonials {
+    .subtitle {
+      margin-top: 40px;
+    }
+    ul {
+      li {
+        width: 33.3%;
+        img {
+          width: 180px;
+        }
+      }
+    }
+  }
+}
