@@ -3,7 +3,7 @@ module.exports = function(shipit) {
 
   shipit.initConfig({
     production: {
-      servers: '142.4.202.189',
+      servers: 'deploy@142.4.202.189:22022',
       workspace: '/tmp/handsoncode.net',
       deployTo: '/home/httpd/handsoncode.net',
       repositoryUrl: 'https://github.com/handsoncode/handsoncode.net.git',
