@@ -8,6 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "shipit-cli": "^4.1.2",
     "shipit-deploy": "^4.1.3"
   }
 }

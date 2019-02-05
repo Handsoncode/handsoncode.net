@@ -1,4 +1,4 @@
-module.exports = function(shipit) {
+module.exports = (shipit) => {
   require('shipit-deploy')(shipit);
 
   shipit.initConfig({
@@ -15,16 +15,16 @@ module.exports = function(shipit) {
     }
   });
 
-  shipit.task('test', function() {
+  shipit.task('test', () => {
     shipit.remote('pwd');
   });
 
   shipit.blTask('deploy', ['deploy:init', 'deploy:fetch', 'deploy:update']);
 
-  shipit.on('updated', function() {
-    var path = shipit.releasePath;
+  shipit.on('updated', () => {
+    const path = shipit.releasePath;
 
-    shipit.remote('cd ' + path + ' && npm install --production').then(function() {
+    shipit.remote('cd ' + path + ' && npm install --production').then(() => {
       shipit.start(['deploy:publish', 'deploy:clean']);
     });
   });
