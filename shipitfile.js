@@ -25,9 +25,6 @@ module.exports = function(shipit) {
     var path = shipit.releasePath;
 
     shipit.remote('cd ' + path + ' && npm install --production').then(function() {
-      return shipit.remote('cd ' + path + ' && grunt build');
-
-    }).then(function() {
       shipit.start(['deploy:publish', 'deploy:clean']);
     });
   });
