@@ -11,7 +11,7 @@ module.exports = (shipit) => {
       ignores: ['.git', 'node_modules', 'shipitfile.js'],
       rsync: ['--force', '--delete', '--delete-excluded', '-I', '--stats', '--chmod=ug=rwX'],
       keepReleases: 3,
-      shallowClone: false
+      shallowClone: true
     }
   });
 
@@ -22,9 +22,7 @@ module.exports = (shipit) => {
   shipit.blTask('deploy', ['deploy:init', 'deploy:fetch', 'deploy:update']);
 
   shipit.on('updated', () => {
-    const path = shipit.releasePath;
-
-    shipit.remote('cd ' + path + ' && npm install --production').then(() => {
+    shipit.remote(`cd ${shipit.releasePath} && npm install --production`).then(() => {
       shipit.start(['deploy:publish', 'deploy:clean']);
     });
   });
