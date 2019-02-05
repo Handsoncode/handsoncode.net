@@ -265,7 +265,6 @@ body .col {
 .header {
   width: 100%;
   height: 100vh;
-  min-height: 600px;
   position: relative;
   overflow: hidden;
   background-color: rgba(20, 27, 41, 0.9);
@@ -301,6 +300,9 @@ body .col {
   letter-spacing: -1px;
   line-height: 1.2;
   font-weight: 600;
+}
+.header .button {
+  margin-bottom: 20px;
 }
 .header video {
   width: auto;
@@ -407,12 +409,15 @@ footer .item:nth-child(2) a:not(:last-child):after {
 /* CSS MEDIA QUERIES
 ----------------------------------*/
 /* Small screens */
-@media (max-width: 460px) {
+@media (max-width: 480px) {
   h2 {
     font-size: 36px;
   }
   h3 {
     font-size: 20px;
+  }
+  .header {
+    min-height: 880px;
   }
   .header a img {
     float: none;
