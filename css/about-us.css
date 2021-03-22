@@ -15,9 +15,7 @@
     font-size: 18px;
     line-height: 1.7;
 }
+
 .about-us .paragraph ul {
     list-style: square;
-}
-.about-us .bold {
-    font-weight: bold;
 }
