@@ -228,7 +228,7 @@ h2 {
 h3 {
   font-size: 28px;
   width: 60%;
-  margin: 20px auto 30px;
+  margin: 20px auto 50px;
   line-height: 1.2;
 }
 strong {
@@ -329,7 +329,6 @@ body .col {
 }
 .header .eu-promo img {
   max-width: 100%;
-  padding: 14px;
 }
 .testimonials {
   padding: 80px 0 30px;
